@@ -1,0 +1,25 @@
+<% provide(:title, 'Create') %>
+<h1>Create Eatery</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@eatery) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+
+      <%= f.label :tel %>
+      <%= f.text_field :tel %>
+
+      <%= f.label :open, "開店時間" %>
+      <%= f.time_select :open %>
+
+      <%= f.label :close, "閉店時間" %>
+      <%= f.time_select :close %>
+
+      <%= f.submit "Create new eatery", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

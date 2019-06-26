@@ -1,0 +1,2 @@
+class Moreless < ApplicationRecord
+end

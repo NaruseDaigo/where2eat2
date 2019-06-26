@@ -1,0 +1,22 @@
+<div class="eatery">
+  <h1><span class="mgr-20">名前:</span><%= @recommend1.name %></h1>
+  <li>
+    <h4><span class="mgr-20">住所:</span><%= @recommend1.address %></h4>
+    <h4><span class="mgr-20">電話番号:</span><%= @recommend1.tel %></h4>
+  </li>
+</div>
+
+<%= link_to "こっちの方がいい", choose_path(params: { prefer: { user_id: 19, more: @recommend1.id, less: @recommend2.id, count: @count} }), method: :post, class: "btn btn-danger btn-block" %>
+
+<div class="eatery">
+  <h1><span class="mgr-20">名前:</span><%= @recommend2.name %></h1>
+  <li>
+    <h4><span class="mgr-20">住所:</span><%= @recommend2.address %></h4>
+    <h4><span class="mgr-20">電話番号:</span><%= @recommend2.tel %></h4>
+  </li>
+</div>
+
+<%= link_to "こっちの方がいい", choose_path(params: { prefer: { user_id: 19, more: @recommend2.id, less: @recommend1.id} }), method: :post, class: "btn btn-danger btn-block" %>
+
+<h2>あと<%= 5 - @count %>回選んで</h2>
+5人中3人が選択肢1を選んでいます。

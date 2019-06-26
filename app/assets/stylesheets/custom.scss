@@ -32,6 +32,9 @@ textarea {
   }
 }
 
+.mgr-20{
+    margin-right: 20px;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -176,5 +179,34 @@ input {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
+  }
+}
+
+/* eateries index */
+
+.eateries {
+  list-style: none;
+  margin: 0;
+  margin-left: 80px;
+  margin-right: 80px;
+  li {
+    overflow: auto;
+    padding: 10px 50px;
+    margin-bottom: 2px;
+    border: 2px solid $gray-lighter;
+    border-radius: 10px  10px 10px 10px;
+  }
+}
+
+/* eatery show */
+.eatery {
+  list-style: none;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-bottom: 20px;
+  li {
+    overflow: auto;
+    padding: 10px 50px;
+    border: 2px solid $gray-lighter;
   }
 }

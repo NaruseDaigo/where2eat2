@@ -1,0 +1,11 @@
+<% provide(:title, 'eatery') %>
+<h1><%= @eatery.name %></h1>
+<div class="eatery">
+  <li>
+    <h4><span class="mgr-20">住所:</span><%= @eatery.address %></h4>
+    <h4><span class="mgr-20">電話番号:</span><%= @eatery.tel %></h4>
+    <h4><span class="mgr-20">OPEN:</span><%= @eatery.open %></h4>
+    <h4><span class="mgr-20">CLOSE:</span><%= @eatery.close %></h4>
+  </li>
+</div>
+<%= link_to "delete", @eatery, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger btn-block" %>
